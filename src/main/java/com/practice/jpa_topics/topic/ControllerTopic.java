@@ -6,19 +6,19 @@ import org.springframework.web.bind.annotation.*;
  * Also, I inject the instance into the field*/
 
 @RestController
-public class MyControllerTopic {
+public class ControllerTopic {
 
     @Autowired
-    private TopicService topicService;
+    private ServiceTopic topicService;
 
     @RequestMapping("/topics")
-    public TopicService gettingTopics() {
+    public ServiceTopic gettingTopics() {
         return topicService;
     }
 
-    @RequestMapping("/topics/{topic}")
-    public TopicToStudy gettingTopics(@PathVariable String topic) {
-        return topicService.get(topic);
+    @RequestMapping("/topics/{id}")
+    public TopicToStudy gettingTopics(@PathVariable int id) {
+        return topicService.get(id);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/topics")

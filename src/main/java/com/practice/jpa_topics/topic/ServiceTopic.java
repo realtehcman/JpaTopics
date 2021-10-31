@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Service
-public class TopicService {
+public class ServiceTopic {
     private List<TopicToStudy> listOfTopics;
 
     //instance block is called whenever the class is initialized by Spring Boot
@@ -23,10 +23,13 @@ public class TopicService {
         return listOfTopics;
     }
 
-    public TopicToStudy get(String topicName) {
-        return listOfTopics.stream().filter(t ->
-                t.getTopic().equalsIgnoreCase(topicName)
-        ).findFirst().get();
+    public TopicToStudy get(int id) {
+        for (TopicToStudy t : listOfTopics) {
+            if (t.get_id() == id)
+                return t;
+        }
+        System.out.println("No such id");
+        return null;
     }
 
     public void add(TopicToStudy topic) {
@@ -34,14 +37,14 @@ public class TopicService {
     }
 
     public void update(String topicName, TopicToStudy newTopic) {
-        for (int i = 0; i < listOfTopics.size(); i++){
+        for (int i = 0; i < listOfTopics.size(); i++) {
             TopicToStudy t = listOfTopics.get(i);
-            if(t.getTopic().equals(topicName))
+            if (t.getTopic().equals(topicName))
                 listOfTopics.set(i, newTopic);
         }
     }
 
-    public void delete(String topicName){
+    public void delete(String topicName) {
         listOfTopics.forEach(t -> {
             if (t.getTopic().equals(topicName))
                 listOfTopics.remove(t.get_id());
