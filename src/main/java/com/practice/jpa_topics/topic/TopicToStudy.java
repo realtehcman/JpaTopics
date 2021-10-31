@@ -1,6 +1,12 @@
 package com.practice.jpa_topics.topic;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class TopicToStudy {
+
+    @Id
     private int _id;
     private String topic;
     private String importance;

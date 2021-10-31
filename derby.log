@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Tue Oct 26 10:05:49 CEST 2021:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017c-bba2-4ed3-00000690d070 
-on database directory memory:D:\Backup stuff from Ubuntu\Ubuntu backup\IdeaProjects\YouTube\Spring Boot Quick Start\jpa_topics\0c4fe6fa-0bee-4aa8-b84d-e3cc6ae46f5b with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
-Loaded from file:/C:/Users/max/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
-java.vendor=Amazon.com Inc.
+Wed Oct 27 11:31:37 CEST 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017c-c117-3b00-000007a3b760 
+on database directory memory:J:\IdeaProjects\JsonXmlCourse\JpaTopics\fb6713be-0a8b-4573-a518-c0905fcb1c22 with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/J:/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Azul Systems, Inc.
 java.runtime.version=1.8.0_302-b08
-user.dir=D:\Backup stuff from Ubuntu\Ubuntu backup\IdeaProjects\YouTube\Spring Boot Quick Start\jpa_topics
+user.dir=J:\IdeaProjects\JsonXmlCourse\JpaTopics
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0

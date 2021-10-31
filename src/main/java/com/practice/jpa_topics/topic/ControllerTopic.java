@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
  * Also, I inject the instance into the field*/
 
 @RestController
-public class MyControllerTopic {
+public class ControllerTopic {
 
     @Autowired
     private TopicService topicService;
@@ -16,9 +16,9 @@ public class MyControllerTopic {
         return topicService;
     }
 
-    @RequestMapping("/topics/{topic}")
-    public TopicToStudy gettingTopics(@PathVariable String topic) {
-        return topicService.get(topic);
+    @RequestMapping("/topics/{id}")
+    public TopicToStudy gettingTopics(@PathVariable int id) {
+        return topicService.get(id);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/topics")
@@ -32,10 +32,9 @@ public class MyControllerTopic {
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{topicName}")
-    public void deleteTopic(@PathVariable String topicName) {
-        topicService.delete(topicName);
+    public void deleteTopic(@PathVariable int id) {
+        topicService.delete(id);
     }
-
 
 }
 
