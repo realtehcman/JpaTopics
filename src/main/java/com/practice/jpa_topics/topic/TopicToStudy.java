@@ -5,7 +5,6 @@ import javax.persistence.Id;
 
 @Entity
 public class TopicToStudy {
-
     @Id
     private int _id;
     private String topic;
