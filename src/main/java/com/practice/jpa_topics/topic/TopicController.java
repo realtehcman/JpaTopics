@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
  * Also, I inject the instance into the field*/
 
 @RestController
-public class MyControllerTopic {
+public class TopicController {
 
     @Autowired
     private TopicService topicService;
