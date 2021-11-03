@@ -13,7 +13,6 @@ public class ServiceTopic {
     private RepositoryTopic repositoryTopic;
 
 
-
     public List<TopicToStudy> getListOfTopics() {
         List<TopicToStudy> toReturn = new ArrayList<>();
 
@@ -33,7 +32,7 @@ public class ServiceTopic {
         add(newTopic);
     }
 
-    public void delete(String id){
+    public void delete(String id) {
         repositoryTopic.deleteById(id);
     }
 }
