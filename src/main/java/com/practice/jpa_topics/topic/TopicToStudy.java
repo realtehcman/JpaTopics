@@ -1,30 +1,35 @@
 package com.practice.jpa_topics.topic;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class TopicToStudy {
+    @Id
     private int id;
-    private String topic;
+
+    private String topicName;
     private String importance;
 
     public TopicToStudy() {
     }
 
-    public TopicToStudy(int id, String topic, String importance) {
+    public TopicToStudy(int id, String topicName, String importance) {
         this.id = id;
-        this.topic = topic;
+        this.topicName = topicName;
         this.importance = importance;
     }
 
-    public int get_id() {
+    public int getId() {
         return id;
     }
 
-    public String getTopic() {
-        return topic;
+    public String getTopicName() {
+        return topicName;
     }
 
     public String getImportance() {
         return importance;
     }
-
-
 }

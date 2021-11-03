@@ -9,33 +9,32 @@ import org.springframework.web.bind.annotation.*;
 public class ControllerTopic {
 
     @Autowired
-    private ServiceTopic topicService;
+    private ServiceTopic serviceTopic;
 
     @RequestMapping("/topics")
     public ServiceTopic gettingTopics() {
-        return topicService;
+        return serviceTopic;
     }
 
     @RequestMapping("/topics/{id}")
     public TopicToStudy gettingTopics(@PathVariable int id) {
-        return topicService.get(id);
+        return serviceTopic.get(id);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/topics")
     public void addTopic(@RequestBody TopicToStudy newTopic) {
-        topicService.add(newTopic);
+        serviceTopic.add(newTopic);
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/topics/{topicName}")
-    public void updateTopic(@RequestBody TopicToStudy newTopic, @PathVariable String topicName) {
-        topicService.update(topicName, newTopic);
+    @RequestMapping(method = RequestMethod.PUT, value = "/topics/{id}")
+    public void updateTopic(@RequestBody TopicToStudy newTopic, @PathVariable int id) {
+        serviceTopic.update(id, newTopic);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{topicName}")
-    public void deleteTopic(@PathVariable String topicName) {
-        topicService.delete(topicName);
+    @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
+    public void deleteTopic(@PathVariable int id) {
+        serviceTopic.delete(id);
     }
-
 }
 
 /*ERRORS 415, 500 IN POSTMAN; SOLUTION

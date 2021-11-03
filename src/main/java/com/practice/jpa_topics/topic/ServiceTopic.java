@@ -24,11 +24,10 @@ public class ServiceTopic {
     }
 
     public TopicToStudy get(int id) {
-        for (TopicToStudy t : listOfTopics) {
-            if (t.get_id() == id)
+        for (TopicToStudy t : listOfTopics){
+            if (t.getId()==id)
                 return t;
         }
-        System.out.println("No such id");
         return null;
     }
 
@@ -36,18 +35,17 @@ public class ServiceTopic {
         listOfTopics.add(topic);
     }
 
-    public void update(String topicName, TopicToStudy newTopic) {
-        for (int i = 0; i < listOfTopics.size(); i++) {
-            TopicToStudy t = listOfTopics.get(i);
-            if (t.getTopic().equals(topicName))
-                listOfTopics.set(i, newTopic);
+    public void update(int id, TopicToStudy newTopic) {
+        for (TopicToStudy t : listOfTopics){
+            if (t.getId()==id)
+                listOfTopics.set(t.getId(), newTopic);
         }
     }
 
-    public void delete(String topicName) {
-        listOfTopics.forEach(t -> {
-            if (t.getTopic().equals(topicName))
-                listOfTopics.remove(t.get_id());
-        });
+    public void delete(int id){
+        for (TopicToStudy t : listOfTopics){
+            if (t.getId()==id)
+                listOfTopics.remove(t.getId());
+        }
     }
 }
