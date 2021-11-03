@@ -7,7 +7,7 @@ import javax.persistence.Id;
 @Entity
 public class TopicToStudy {
     @Id
-    private int id;
+    private String id;
 
     private String topicName;
     private String importance;
@@ -15,13 +15,13 @@ public class TopicToStudy {
     public TopicToStudy() {
     }
 
-    public TopicToStudy(int id, String topicName, String importance) {
+    public TopicToStudy(String id, String topicName, String importance) {
         this.id = id;
         this.topicName = topicName;
         this.importance = importance;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
