@@ -1,4 +1,4 @@
-package com.practice.jpa.topics.topic;
+package com.practice.jpa.topic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

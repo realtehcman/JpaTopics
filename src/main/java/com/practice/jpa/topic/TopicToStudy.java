@@ -1,4 +1,4 @@
-package com.practice.jpa.topics.topic;
+package com.practice.jpa.topic;
 
 
 import javax.persistence.Entity;
