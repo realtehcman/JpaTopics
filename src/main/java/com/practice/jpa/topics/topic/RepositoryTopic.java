@@ -1,4 +1,4 @@
-package com.practice.jpa_topics.topic;
+package com.practice.jpa.topics.topic;
 
 import org.springframework.data.repository.CrudRepository;
 

@@ -1,4 +1,4 @@
-package com.practice.jpa_topics;
+package com.practice.jpa.topics;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

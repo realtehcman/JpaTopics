@@ -1,4 +1,4 @@
-package com.practice.jpa_topics.topic;
+package com.practice.jpa.topics.topic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
