@@ -20,7 +20,7 @@ public class ServiceTopic {
         return toReturn;
     }
 
-    public TopicToStudy get(String id) {
+    public TopicToStudy get(Long id) {
         return repositoryTopic.findById(id).orElse(null);
     }
 
@@ -28,11 +28,11 @@ public class ServiceTopic {
         repositoryTopic.save(topic);
     }
 
-    public void update(String id, TopicToStudy newTopic) {
+    public void update(Long id, TopicToStudy newTopic) {
         add(newTopic);
     }
 
-    public void delete(String id) {
+    public void delete(Long id) {
         repositoryTopic.deleteById(id);
     }
 }

@@ -1,27 +1,44 @@
 package com.practice.jpa_topics.topic;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity
+@Entity(name = "topics") //the actual table name in the DB
 public class TopicToStudy {
     @Id
-    private String id;
+    @Column(
+            unique = true,
+            nullable = false,
+            insertable = false,
+            updatable = false
+    )
+    @SequenceGenerator(
+            name = "id_generator",
+            sequenceName = "id_generator",
+            allocationSize = 1 //initial id value
+    )
+    @GeneratedValue(
+            generator = "id_generator",
+            strategy = GenerationType.SEQUENCE
+    )
+    private Long id;
 
+    @Column(
+            name = "topicName",
+            nullable = false
+    )
     private String topicName;
     private String importance;
 
     public TopicToStudy() {
     }
 
-    public TopicToStudy(String id, String topicName, String importance) {
-        this.id = id;
+    public TopicToStudy(String topicName, String importance) {
         this.topicName = topicName;
         this.importance = importance;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
