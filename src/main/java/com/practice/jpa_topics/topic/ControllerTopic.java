@@ -2,6 +2,8 @@ package com.practice.jpa_topics.topic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 /*MAPPING HAPPENS HERE.
  * Also, I inject the instance into the field*/
 
@@ -34,6 +36,11 @@ public class ControllerTopic {
     @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
     public void deleteTopic(@PathVariable Long id) {
         serviceTopic.delete(id);
+    }
+
+    @RequestMapping("/topics/all")
+    public List allTopics(){
+        return serviceTopic.getListOfTopics();
     }
 }
 
