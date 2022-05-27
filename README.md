@@ -35,3 +35,7 @@
  ```
  - View data in Database
  Put SQL commands to view what database consists of 
+
+## Possible errors
+_ERRORS 415, 500 IN POSTMAN; SOLUTION_  
+Add `Content-Type`: `application/json` and `Accept`: `application/json`  In the POSTMAN -> headers -> bulk edit */
